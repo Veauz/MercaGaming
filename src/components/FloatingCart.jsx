@@ -4,72 +4,75 @@ import { FaShoppingCart } from "react-icons/fa";
 function FloatingCart({cart}) {
 
 
-const total = cart.reduce(
-    (acc, game)=> acc + game.precio,
-    0
-);
+    const total = cart.reduce(
+        (acc, game) => acc + game.precio,
+        0
+    );
+
+
+    return (
+
+        <div className="floating-cart">
+
+
+            <FaShoppingCart />
+
+
+            <span>
+                {cart.length}
+            </span>
 
 
 
-return (
-
-<div className="floating-cart">
+            <div className="floating-cart-box">
 
 
-<FaShoppingCart/>
-
-<span>
-{cart.length}
-</span>
+                <h5>
+                    🛒 Carrito
+                </h5>
 
 
 
-<div className="floating-cart-box">
+                {
+                    cart.length === 0 ?
+
+                    <p>
+                        Vacío
+                    </p>
 
 
-<h5>
-🛒 Carrito
-</h5>
+                    :
 
 
-{
-cart.length === 0 ?
+                    cart.map((game)=>(
 
-<p>
-Vacío
-</p>
+                        <p key={game.id}>
+                            {game.nombre}
+                            <br/>
+                            ${game.precio}
+                        </p>
 
-:
+                    ))
 
-cart.map((game)=>(
-
-<p key={game.id}>
-{game.nombre}
-<br/>
-${game.precio}
-</p>
-
-))
-
-}
+                }
 
 
 
-<hr/>
+                <hr/>
 
 
-<strong>
-Total: ${total}
-</strong>
+                <strong>
+                    Total: ${total}
+                </strong>
 
 
-</div>
+            </div>
 
 
 
-</div>
+        </div>
 
-)
+    );
 
 
 }

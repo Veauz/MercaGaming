@@ -1,4 +1,7 @@
-/* Fondo general */
+/* =========================
+   GENERAL
+========================= */
+
 
 body {
 
@@ -20,7 +23,6 @@ body {
 }
 
 
-/* Títulos */
 
 h1 {
 
@@ -33,19 +35,22 @@ h1 {
 
 
 
-/* Tarjetas de juegos */
+/* =========================
+   TARJETAS DE JUEGOS
+========================= */
+
 
 .card {
 
     background: #161b22;
 
-    color: white;
+    color:white;
 
-    border: none;
+    border:none;
 
-    overflow: hidden;
+    overflow:hidden;
 
-    transition: .3s;
+    transition:.3s;
 
 }
 
@@ -53,7 +58,7 @@ h1 {
 
 .card:hover {
 
-    transform: translateY(-8px);
+    transform:translateY(-8px);
 
     box-shadow:
     0 15px 30px rgba(0,0,0,.5);
@@ -64,23 +69,26 @@ h1 {
 
 .card img {
 
-    height: 280px;
+    height:280px;
 
-    object-fit: cover;
+    object-fit:cover;
 
 }
 
 
 
-/* Buscador */
+/* =========================
+   BUSCADOR
+========================= */
+
 
 .form-control {
 
-    background: #111827;
+    background:#111827;
 
-    color: white;
+    color:white;
 
-    border: 1px solid #374151;
+    border:1px solid #374151;
 
 }
 
@@ -88,20 +96,26 @@ h1 {
 
 .form-control::placeholder {
 
-    color: #aaa;
+    color:#aaa;
 
 }
 
 
 
-/* Animación entrada juegos */
+/* =========================
+   ANIMACION JUEGOS
+========================= */
+
 
 .game-card-animation {
+
 
     animation:
     aparecerJuego .8s ease forwards;
 
-    opacity: 0;
+
+    opacity:0;
+
 
 }
 
@@ -109,30 +123,31 @@ h1 {
 
 .game-card-animation:nth-child(1){
 
-    animation-delay: .2s;
+    animation-delay:.2s;
 
 }
 
 
 .game-card-animation:nth-child(2){
 
-    animation-delay: .4s;
+    animation-delay:.4s;
 
 }
 
 
 .game-card-animation:nth-child(3){
 
-    animation-delay: .6s;
+    animation-delay:.6s;
 
 }
 
 
 .game-card-animation:nth-child(4){
 
-    animation-delay: .8s;
+    animation-delay:.8s;
 
 }
+
 
 
 
@@ -150,6 +165,7 @@ from {
 }
 
 
+
 to {
 
     opacity:1;
@@ -160,11 +176,16 @@ to {
 
 }
 
+
 }
 
 
 
-/* Detalle del juego */
+
+/* =========================
+   DETALLE DEL JUEGO
+========================= */
+
 
 .detail-animation {
 
@@ -187,6 +208,7 @@ from {
 }
 
 
+
 to {
 
     opacity:1;
@@ -195,18 +217,20 @@ to {
 
 }
 
+
 }
 
 
 
-/* Portada detalle */
-
 .portada {
+
 
     animation:
     aparecerPortada .6s ease;
 
+
 }
+
 
 
 
@@ -223,6 +247,7 @@ from {
 }
 
 
+
 to {
 
     opacity:1;
@@ -232,129 +257,24 @@ to {
 
 }
 
-}
-
-
-
-/* Carrito flotante */
-
-.cart-hover {
-
-    position: relative;
-
-    cursor:pointer;
 
 }
 
 
 
-.cart-preview {
 
+/* =========================
+   WELCOME
+========================= */
 
-    position:absolute;
-
-    top:35px;
-
-    right:0;
-
-    width:280px;
-
-    background:#161b22;
-
-    color:white;
-
-    padding:20px;
-
-    border-radius:10px;
-
-    box-shadow:
-    0 10px 30px rgba(0,0,0,.5);
-
-    z-index:2000;
-
-    animation:
-    aparecerMenu .3s ease;
-
-}
-
-
-
-/* Favoritos flotante */
-
-.favorite-hover {
-
-    position:relative;
-
-    cursor:pointer;
-
-}
-
-
-
-.favorite-preview {
-
-
-    position:absolute;
-
-    top:35px;
-
-    right:0;
-
-    width:250px;
-
-    background:#161b22;
-
-    color:white;
-
-    padding:20px;
-
-    border-radius:10px;
-
-    box-shadow:
-    0 10px 30px rgba(0,0,0,.5);
-
-    z-index:2000;
-
-    animation:
-    aparecerMenu .3s ease;
-
-}
-
-
-
-@keyframes aparecerMenu {
-
-
-from {
-
-    opacity:0;
-
-    transform:
-    translateY(-10px);
-
-}
-
-
-to {
-
-    opacity:1;
-
-    transform:
-    translateY(0);
-
-}
-
-}
-
-
-
-/* Pantalla Welcome */
 
 .welcome {
+
 
     position:fixed;
 
     inset:0;
+
 
     background:
 
@@ -364,6 +284,7 @@ to {
     #222
     );
 
+
     display:flex;
 
     flex-direction:column;
@@ -372,38 +293,53 @@ to {
 
     align-items:center;
 
+
     color:white;
+
 
     z-index:3000;
 
+
 }
+
 
 
 
 .welcome h1 {
 
+
     font-size:70px;
+
 
     animation:
     entradaWelcome 1s ease;
+
 
 }
 
 
 
+
 .welcome button {
+
 
     margin-top:40px;
 
+
     padding:15px 50px;
+
 
     font-size:25px;
 
+
     border:none;
+
 
     border-radius:10px;
 
+
     cursor:pointer;
+
 
 }
 
@@ -411,10 +347,13 @@ to {
 
 .launch h1 {
 
+
     animation:
     lanzarWelcome .8s forwards;
 
+
 }
+
 
 
 
@@ -423,22 +362,29 @@ to {
 
 from {
 
+
     opacity:0;
 
     transform:scale(.5);
 
+
 }
 
 
+
 to {
+
 
     opacity:1;
 
     transform:scale(1);
 
-}
 
 }
+
+
+}
+
 
 
 
@@ -447,23 +393,39 @@ to {
 
 from {
 
+
     opacity:1;
 
     transform:translateY(0);
 
+
 }
 
 
+
 to {
+
 
     opacity:0;
 
     transform:translateY(-500px);
 
-}
 
 }
+
+
+}
+
+
+
+
+/* =========================
+   NAVBAR MENUS FLOTANTES
+========================= */
+
+
 .menu-hover {
+
 
     position:relative;
 
@@ -475,28 +437,40 @@ to {
 
 .menu-box {
 
+
     display:none;
+
 
     position:absolute;
 
+
     top:30px;
+
 
     right:0;
 
+
     width:260px;
+
 
     background:#161b22;
 
+
     color:white;
+
 
     padding:20px;
 
+
     border-radius:10px;
+
 
     box-shadow:
     0 10px 30px rgba(0,0,0,.5);
 
+
     z-index:3000;
+
 
 }
 
@@ -504,10 +478,13 @@ to {
 
 .menu-hover:hover .menu-box {
 
+
     display:block;
+
 
     animation:
     aparecerMenu .3s ease;
+
 
 }
 
@@ -515,10 +492,13 @@ to {
 
 .menu-box p {
 
+
     border-bottom:
     1px solid #333;
 
+
     padding-bottom:8px;
+
 
 }
 
@@ -529,138 +509,185 @@ to {
 
 from {
 
+
     opacity:0;
+
 
     transform:translateY(-10px);
 
+
 }
+
 
 
 to {
 
+
     opacity:1;
+
 
     transform:translateY(0);
 
-}
 
 }
+
+
+}
+
+
+
+
+/* =========================
+   CARRITO FLOTANTE ESQUINA
+========================= */
+
+
 .floating-cart {
 
 
-position:fixed;
+    position:fixed;
 
 
-right:30px;
-
-bottom:30px;
+    right:30px;
 
 
-width:60px;
-
-height:60px;
+    bottom:30px;
 
 
-background:#198754;
+
+    width:60px;
 
 
-border-radius:50%;
+    height:60px;
 
 
-display:flex;
 
-justify-content:center;
-
-align-items:center;
+    background:#198754;
 
 
-color:white;
+    border-radius:50%;
 
 
-font-size:25px;
+
+    display:flex;
 
 
-cursor:pointer;
+    justify-content:center;
 
 
-z-index:3000;
+    align-items:center;
 
 
-box-shadow:
-0 10px 25px rgba(0,0,0,.5);
+
+    color:white;
+
+
+    font-size:25px;
+
+
+
+    cursor:pointer;
+
+
+
+    z-index:3000;
+
+
+
+    box-shadow:
+
+    0 10px 25px rgba(0,0,0,.5);
 
 
 }
+
 
 
 
 .floating-cart span {
 
 
-position:absolute;
+    position:absolute;
 
 
-top:-5px;
-
-right:-5px;
+    top:-5px;
 
 
-background:red;
+    right:-5px;
 
 
-width:25px;
 
-height:25px;
-
-
-border-radius:50%;
+    background:red;
 
 
-font-size:14px;
+
+    width:25px;
 
 
-display:flex;
+    height:25px;
 
-align-items:center;
 
-justify-content:center;
+
+    border-radius:50%;
+
+
+
+    font-size:14px;
+
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
 
 
 }
+
 
 
 
 .floating-cart-box {
 
 
-display:none;
+    display:none;
 
 
-position:absolute;
+    position:absolute;
 
 
-right:0;
+
+    right:0;
 
 
-bottom:70px;
+    bottom:70px;
 
 
-width:280px;
+
+    width:280px;
 
 
-background:#161b22;
+
+    background:#161b22;
 
 
-padding:20px;
+
+    padding:20px;
 
 
-border-radius:10px;
+
+    border-radius:10px;
 
 
-color:white;
+
+    color:white;
 
 
 }
+
 
 
 
@@ -668,11 +695,12 @@ color:white;
 .floating-cart-box {
 
 
-display:block;
+    display:block;
 
 
-animation:
-aparecerMenu .3s ease;
+
+    animation:
+    aparecerMenu .3s ease;
 
 
 }
