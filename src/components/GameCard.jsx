@@ -29,6 +29,16 @@ function GameCard({game, addCart, addFavorite, favorites, setSelectedGame}) {
                     <p className="card-text">
                         Género: {game.genero}
                     </p>
+                    <div className="game-tags mb-3">
+                        {game.etiquetas?.map((etiqueta) => (
+                            <span
+                            key={etiqueta}
+                             className="game-tag"
+                              >
+                                 {etiqueta}
+                                 </span>
+                                 ))}
+                                 </div>
 
 
                     <p className="fw-bold">

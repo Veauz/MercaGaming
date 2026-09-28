@@ -1,0 +1,41 @@
+# 🎮 MercaGaming
+
+Tienda virtual de videojuegos desarrollada con React y Vite.
+
+## 📌 Descripción
+
+MercaGaming es una aplicación web que permite visualizar videojuegos,
+buscar productos, ver información detallada, agregar elementos al carrito
+y gestionar favoritos.
+
+##  Tecnologías utilizadas
+
+- React
+- JavaScript (JSX)
+- Vite
+- Bootstrap
+- React Icons
+- CSS
+
+##  Funcionalidades
+
+- Pantalla de bienvenida animada
+- Listado dinámico de videojuegos
+- Buscador de juegos
+- Vista detallada de productos
+- Carrito de compras
+- Sistema de favoritos
+- Carrito flotante
+- Diseño responsive
+
+##  Componentes principales
+
+- Navbar
+- Welcome
+- SearchBar
+- GameList
+- GameCard
+- GameDetail
+- FloatingCart
+
+##  Estructura del proyecto
