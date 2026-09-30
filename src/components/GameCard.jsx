@@ -3,7 +3,9 @@ import { FaHeart, FaShoppingCart } from "react-icons/fa";
 
 function GameCard({game, addCart, addFavorite, favorites, setSelectedGame}) {
 
-
+console.log("Juego:", game.nombre);
+console.log("Favoritos recibidos:", favorites);
+console.log("CARD", game.nombre, favorites);
     return (
 
         <div className="col-md-4 mb-4 game-card-animation">
@@ -66,7 +68,10 @@ function GameCard({game, addCart, addFavorite, favorites, setSelectedGame}) {
 
                    <button
                    className={`btn ${
-                    favorites.some(item => item.id === game.id)
+                    favorites.some(
+    item => String(item.gameId) === String(game.id)
+)
+
                     ? "btn-danger"
                     : "btn-outline-danger"
                     }`}

@@ -1,7 +1,7 @@
 import { FaShoppingCart } from "react-icons/fa";
 
 
-function FloatingCart({cart}) {
+function FloatingCart({cart, removeCart}) {
 
 
     const total = cart.reduce(
@@ -46,11 +46,18 @@ function FloatingCart({cart}) {
 
                     cart.map((game)=>(
 
-                        <p key={game.id}>
+                        <div key={game.id}>
                             {game.nombre}
                             <br/>
                             ${game.precio}
-                        </p>
+                            <button
+                                type="button"
+                                className="btn btn-sm btn-outline-danger ms-2"
+                                onClick={() => removeCart(game.id)}
+                            >
+                                Eliminar
+                            </button>
+                        </div>
 
                     ))
 

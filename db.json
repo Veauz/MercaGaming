@@ -1,0 +1,103 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "nombre": "Ignacio",
+      "correo": "ignacio@demo.com"
+    },
+    {
+      "id": "2",
+      "nombre": "Usuario Demo",
+      "correo": "demo@mercagaming.com"
+    }
+  ],
+  "favorites": [
+    {
+      "userId": "1",
+      "gameId": 1,
+      "id": "0qP72qoyHnY"
+    },
+    {
+      "userId": "1",
+      "gameId": 3,
+      "id": "wXrEiw-sXnI"
+    },
+    {
+      "userId": "1",
+      "gameId": 3,
+      "id": "yOzMSjyxXMI"
+    },
+    {
+      "userId": "1",
+      "gameId": 1,
+      "id": "CHVRvfXJ_mI"
+    },
+    {
+      "userId": "1",
+      "gameId": 1,
+      "id": "WG9v3EQqOkY"
+    },
+    {
+      "userId": "1",
+      "gameId": 1,
+      "id": "_ikrR4yRXSc"
+    },
+    {
+      "userId": "1",
+      "gameId": 1,
+      "id": "U9N5keJa07g"
+    },
+    {
+      "userId": "1",
+      "gameId": 2,
+      "id": "JZhvtGVLJVo"
+    },
+    {
+      "userId": "1",
+      "gameId": 1,
+      "id": "Tg-KXMzY_OM"
+    },
+    {
+      "userId": "1",
+      "gameId": 3,
+      "id": "Us01rKYqQDw"
+    },
+    {
+      "userId": "1",
+      "gameId": 1,
+      "id": "LZCaL1unIvo"
+    },
+    {
+      "userId": "1",
+      "gameId": 15,
+      "id": "O0DCnKp-vOM"
+    },
+    {
+      "userId": "1",
+      "gameId": 3,
+      "id": "YBJEu-370es"
+    }
+  ],
+  "orders": [
+    {
+      "usuario": "Ignacio",
+      "juegos": [
+        {
+          "id": 1,
+          "nombre": "Far Cry 6",
+          "precio": 49990
+        },
+        {
+          "id": 2,
+          "nombre": "God of War Ragnarok",
+          "precio": 59990
+        }
+      ],
+      "total": 109980,
+      "fecha": "30/9/2026",
+      "id": "SFWwokVGSxU"
+    }
+  ],
+  "games": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}

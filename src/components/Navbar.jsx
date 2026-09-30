@@ -1,7 +1,7 @@
 import { FaShoppingCart, FaHeart } from "react-icons/fa";
 
 
-function Navbar({ cart, favorites }) {
+function Navbar({ cart, favorites, abrirCompra }) {
 
 
     const total = cart.reduce(
@@ -12,6 +12,7 @@ function Navbar({ cart, favorites }) {
 
     return (
 
+
         <nav className="navbar navbar-dark bg-dark px-4">
 
 
@@ -21,10 +22,13 @@ function Navbar({ cart, favorites }) {
 
 
 
+
             <div className="d-flex gap-4 text-white">
 
 
+
                 {/* CARRITO */}
+
 
                 <div className="menu-hover">
 
@@ -37,6 +41,7 @@ function Navbar({ cart, favorites }) {
 
 
 
+
                     <div className="menu-box">
 
 
@@ -45,26 +50,38 @@ function Navbar({ cart, favorites }) {
                         </h5>
 
 
+
                         {
                             cart.length === 0 ?
+
 
                             <p>
                                 Vacío
                             </p>
 
+
                             :
+
 
                             cart.map((game)=>(
 
+
                                 <p key={game.id}>
+
                                     {game.nombre}
+
                                     <br/>
+
                                     ${game.precio}
+
                                 </p>
+
 
                             ))
 
                         }
+
+
 
 
                         <hr/>
@@ -75,7 +92,27 @@ function Navbar({ cart, favorites }) {
                         </strong>
 
 
+
+                        {
+                            cart.length > 0 &&
+
+
+                            <button
+                                className="btn btn-success mt-3 w-100"
+                                onClick={abrirCompra}
+                            >
+
+                                ✅ Finalizar compra
+
+                            </button>
+
+
+                        }
+
+
+
                     </div>
+
 
 
                 </div>
@@ -83,17 +120,27 @@ function Navbar({ cart, favorites }) {
 
 
 
+
+
                 {/* FAVORITOS */}
+
 
 
                 <div className="menu-hover">
 
 
+
                     <span>
+
                         <FaHeart />
+
                         {" "}
+
                         Favoritos: {favorites.length}
+
                     </span>
+
+
 
 
 
@@ -106,39 +153,55 @@ function Navbar({ cart, favorites }) {
 
 
 
+
+
                         {
                             favorites.length === 0 ?
+
 
                             <p>
                                 Sin favoritos
                             </p>
 
+
                             :
+
 
                             favorites.map((game)=>(
 
+
                                 <p key={game.id}>
+
                                     {game.nombre}
+
                                 </p>
+
 
                             ))
 
                         }
 
 
+
                     </div>
+
+
 
 
                 </div>
 
 
 
+
             </div>
+
 
 
         </nav>
 
+
     )
+
 
 }
 
